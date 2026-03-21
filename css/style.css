@@ -18,3 +18,34 @@ body::before {
 
   pointer-events: none;
 }
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* LOGO */
+.hero img {
+  width: 220px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 15px #00ff88);
+}
+
+/* TITLE */
+.hero h1 {
+  color: #00ff88;
+  font-size: 48px;
+  margin: 10px 0;
+  text-shadow: 0 0 20px #00ff88;
+}
+
+/* SUBTEXT */
+.hero p {
+  color: #ccc;
+  font-size: 18px;
+}

@@ -73,7 +73,7 @@ body::before {
   opacity: 1;
 }
 
-/* ACTIVE PAGE GLOW (NEW STYLE) */
+/* ACTIVE PAGE GLOW */
 .nav-buttons a.active img {
   transform: scale(1.05);
   opacity: 1;
@@ -136,7 +136,40 @@ body::before {
 
 
 /* =========================
-   GENERIC BUTTONS (used on pages)
+   CONTENT PANELS (NEW)
+========================= */
+section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 12px;
+
+  box-shadow: 0 0 25px rgba(0,0,0,0.7),
+              0 0 15px rgba(120,140,160,0.25);
+
+  backdrop-filter: blur(6px);
+
+  position: relative;
+  z-index: 1;
+}
+
+/* PANEL HEADINGS */
+section h1 {
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+/* PANEL TEXT */
+section p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   GENERIC BUTTONS
 ========================= */
 .btn {
   display: inline-block;

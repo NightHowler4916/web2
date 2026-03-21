@@ -6,7 +6,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
 
   background: url('../assets/background.png') center center / cover no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   color: #e5e5e5;
 }
 
@@ -29,38 +29,56 @@ body::before {
    HEADER / NAVBAR
 ========================= */
 .site-header {
-  text-align: center;
-  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
   position: relative;
   z-index: 2;
 }
 
-/* TOP LOGO TEXT */
-.site-header img {
-  width: 260px;
-  cursor: pointer;
+/* TOP LOGO */
+.logo {
+  width: 220px;
+  margin-bottom: 10px;
   transition: 0.3s;
 }
 
-.site-header img:hover {
+.logo:hover {
   transform: scale(1.05);
 }
 
-/* NAV LINKS */
-nav {
-  margin-top: 10px;
+
+/* NAV BUTTON CONTAINER */
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-nav a {
-  margin: 0 15px;
-  color: #aaa;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.2s;
+/* NAV BUTTON IMAGES */
+.nav-buttons img {
+  width: 150px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  opacity: 0.85;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.6));
 }
 
-nav a:hover {
-  color: #00ff88;
+/* HOVER EFFECT */
+.nav-buttons img:hover {
+  transform: translateY(-4px) scale(1.08);
+  filter: drop-shadow(0 0 12px rgba(0,255,136,0.6));
+  opacity: 1;
+}
+
+/* ACTIVE PAGE GLOW */
+.nav-buttons a.active img {
+  transform: scale(1.05);
+  opacity: 1;
+  filter: drop-shadow(0 0 15px #00ff88)
+          drop-shadow(0 0 25px rgba(0,255,136,0.7));
 }
 
 
@@ -68,7 +86,7 @@ nav a:hover {
    HERO SECTION
 ========================= */
 .hero {
-  height: calc(100vh - 140px); /* accounts for header */
+  height: calc(100vh - 140px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,4 +132,26 @@ nav a:hover {
   color: #d4af37;
   font-size: 18px;
   text-shadow: 0 0 8px rgba(212,175,55,0.6);
+}
+
+
+/* =========================
+   GENERIC BUTTONS (used on pages)
+========================= */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  background: #00ff88;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 10px rgba(0,255,136,0.6);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0,255,136,0.9);
 }

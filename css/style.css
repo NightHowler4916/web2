@@ -46,6 +46,7 @@ body::before {
 
 /* SUBTEXT */
 .hero p {
-  color: #ccc;
+  color: #d4af37;
   font-size: 18px;
+  text-shadow: 0 0 8px rgba(212,175,55,0.6);
 }

@@ -1,11 +1,16 @@
+/* =========================
+   BASE / BACKGROUND
+========================= */
 body {
   margin: 0;
+  font-family: 'Segoe UI', sans-serif;
 
   background: url('../assets/background.png') center center / cover no-repeat;
-
   height: 100vh;
+  color: #e5e5e5;
 }
 
+/* DARK OVERLAY */
 body::before {
   content: "";
   position: fixed;
@@ -15,26 +20,73 @@ body::before {
   height: 100%;
 
   background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
-
   pointer-events: none;
+  z-index: 0;
 }
 
-/* HERO */
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+.site-header {
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  z-index: 2;
+}
+
+/* TOP LOGO TEXT */
+.site-header img {
+  width: 260px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.site-header img:hover {
+  transform: scale(1.05);
+}
+
+/* NAV LINKS */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #00ff88;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
-  height: 100vh;
+  height: calc(100vh - 140px); /* accounts for header */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  position: relative;
+  z-index: 1;
 }
 
-/* LOGO */
+
+/* =========================
+   HERO LOGO (PACK)
+========================= */
 .hero img {
   width: 440px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
-  /* THIS is what makes it look insane */
   filter: drop-shadow(0 0 20px #00ff88)
           drop-shadow(0 0 40px rgba(0,255,136,0.6));
 
@@ -47,7 +99,10 @@ body::before {
           drop-shadow(0 0 60px rgba(0,255,136,0.8));
 }
 
-/* TITLE */
+
+/* =========================
+   HERO TEXT
+========================= */
 .hero h1 {
   color: #00ff88;
   font-size: 48px;
@@ -55,7 +110,6 @@ body::before {
   text-shadow: 0 0 20px #00ff88;
 }
 
-/* SUBTEXT */
 .hero p {
   color: #d4af37;
   font-size: 18px;

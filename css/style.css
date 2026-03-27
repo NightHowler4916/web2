@@ -188,6 +188,10 @@ section p {
               0 0 10px rgba(120,140,160,0.25);
 }
 
+.btn:last-child {
+  background: #5865F2; /* Discord color */
+  color: white;
+}
 
 /* =========================
    GENERIC BUTTONS
